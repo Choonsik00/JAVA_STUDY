@@ -31,15 +31,12 @@ class Pizza extends Food{
 		System.out.println("Eating a slice of "+super.name+"pizza");
 	}
 	public void showToppings() {
-		for(String s:toppings) {
-			
 			System.out.println("Toppings: ");
 			
 			for(String s:toppings) {
 			System.out.println(s+",");
 			}
 			System.out.println("");
-		}
 	}
 }
 	

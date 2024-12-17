@@ -1,0 +1,106 @@
+package java_study_1217;
+
+/* 객체지향 개념 
+클래스는 필드변수(전역변수),메소드, 
+생성자(리턴타입이 없는 메소드)로 구성됨 
+*/
+
+
+class 자동차{
+	/* 
+	 필드변수
+	 1. default 초기값이 존재
+	 (ex. String은 null 값이 자동으로 대입, 
+	 int는 0값이 자동으로 대입) 
+	 2. 모든 메소드에서 필드변수를 사용할 수 있음. 
+	 3. 필드변수 == 속성(attribute) 
+	 (실무에서는 속성) 
+	 */
+	String 브랜드명; //필드변수(전역변수) 
+	String 자동차타입; 
+	
+	public 자동차() { 
+		//기본(default) 생성자 
+		//기본생성자 특징
+	}
+
+
+	/* 
+	 * 1. 메소드이름이 클래스이름과 동일 
+	 * 2. 리턴타입이 없습니다. 
+	 * 3. 필드변수 값을 초기화하기 위해 사용 
+	 */ 
+
+	/* public : 접근지정자
+	(*public, *private, protected, default) 
+	int : 리턴 데이터 타입 
+	getNumber : 메소드 이름(동사)
+	(int x,int y) : 파라미터 or 인자 or 인수 
+	 */ 
+}
+	
+	public int getNumber(int x, int y) {
+		int result = x + y; return result; 
+		//리턴을 선언했으면 리턴 데이터타입에 맞는 값을 return 해야함 
+} 
+	/* 
+	구매한 옷의 가격 int price가 파라미터로 주어졌을 때 
+	지불해야 할 금액을 return하도록 
+	getMoney 함수(메소드) 로직완성하기
+	 */
+
+	public int getMoney(int price) { 
+	/*
+	price금액이 50만원 이상이면 20%할인, 
+	30만원 이상이면 10%할인, 10만원 이상이면 
+	5% 할인
+	*/ 
+	return price; 
+	} 
+
+public class 복습 {
+	
+
+	/*
+	 정수를 담고 있는 배열 arr이 파라미터로 주어졌을 때
+	 배열 값 중 원소가 짝수면 해당 원소를 2로 나누고
+	 다시 해당 원소에 대입 최종 배열 arr를 return하는
+	 함수 getArr를 완성해보세요
+	 */
+	public int[] getArr(int[] arr) {
+		//배열도 리턴 가능
+		for(int i=0;i<arr.length;i++) {
+			int index = arr[i]; //배열 원소값 index에 대입
+			if(index % 2 == 0) {//해당 원소가 짝수라면?
+				arr[i] = index / 2; //2로 나누고 다시 원소에 대입
+				
+			}
+		}
+		return arr;
+	}
+	
+	/*
+	 정수를 담고 있는 배열 arr이 파라미터로 주어졌을 때
+	 배열 arr에 총합을 return하는 getArrSum을 만드세요
+	 */
+	public int[] getArrSum(int[] arr) {
+		//배열도 리턴 가능
+		int sum = 0; //총합 변수
+		for(int i :arr) {
+			sum += arr[i];	
+			}
+		}
+		return sum; //총합을 리턴
+	}
+
+	public static void main(String[] args) {
+
+		자동차 car1 = new 자동차(); 
+		//new : 클래스를 호출(인스턴스화) 
+		//자동차() : default 생성자 
+		
+		int 리턴값 = car1.getNumber(10,20); 
+		System.out.println("리턴 결과 : " + 리턴값); 
+
+	}
+}
